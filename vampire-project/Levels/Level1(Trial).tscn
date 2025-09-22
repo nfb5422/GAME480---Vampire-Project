@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://t6dlrmmf7le5"]
+
+[ext_resource type="PackedScene" uid="uid://c2sya6m7v0ta4" path="res://characters/player(trial).tscn" id="1_yywdt"]
+[ext_resource type="PackedScene" uid="uid://t05qgk0exvhk" path="res://Levels/test_floor.tscn" id="2_fmg63"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(-118, -41)
+
+[node name="Player(Trial)" parent="." instance=ExtResource("1_yywdt")]
+z_index = 1
+position = Vector2(127, 41)
+motion_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="Player(Trial)"]
+position = Vector2(85, -13)
+zoom = Vector2(0.5, 0.5)
+
+[node name="TestFloor" parent="." instance=ExtResource("2_fmg63")]
+position = Vector2(244, 23)
+scale = Vector2(1, 23.6507)
