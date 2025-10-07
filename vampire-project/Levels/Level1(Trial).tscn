@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://t6dlrmmf7le5"]
+[gd_scene load_steps=5 format=3 uid="uid://t6dlrmmf7le5"]
 
 [ext_resource type="PackedScene" uid="uid://c2sya6m7v0ta4" path="res://characters/player(trial).tscn" id="1_yywdt"]
 [ext_resource type="PackedScene" uid="uid://t05qgk0exvhk" path="res://Levels/test_floor.tscn" id="2_fmg63"]
+[ext_resource type="PackedScene" uid="uid://7plrfi08xwim" path="res://characters/villager.tscn" id="3_uxaaf"]
+[ext_resource type="PackedScene" uid="uid://bicucwfgys7kr" path="res://node_2d.tscn" id="4_0eokr"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(-118, -41)
@@ -9,6 +11,8 @@ position = Vector2(-118, -41)
 [node name="Player(Trial)" parent="." instance=ExtResource("1_yywdt")]
 z_index = 1
 position = Vector2(127, 41)
+scale = Vector2(2, 1.98971)
+collision_mask = 0
 motion_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="Player(Trial)"]
@@ -16,5 +20,39 @@ position = Vector2(85, -13)
 zoom = Vector2(0.5, 0.5)
 
 [node name="TestFloor" parent="." instance=ExtResource("2_fmg63")]
-position = Vector2(244, 23)
+position = Vector2(200, 19)
 scale = Vector2(1, 23.6507)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -213.0
+offset_right = 38.0
+grow_vertical = 0
+value = 100.0
+fill_mode = 3
+
+[node name="Villager" parent="." instance=ExtResource("3_uxaaf")]
+position = Vector2(-679, -20)
+
+[node name="Villager2" parent="." instance=ExtResource("3_uxaaf")]
+position = Vector2(-438, 439)
+
+[node name="Villager3" parent="." instance=ExtResource("3_uxaaf")]
+position = Vector2(-295, -448)
+
+[node name="Villager4" parent="." instance=ExtResource("3_uxaaf")]
+position = Vector2(-1643, 89)
+
+[node name="Villager5" parent="." instance=ExtResource("3_uxaaf")]
+position = Vector2(-1206, -834)
+
+[node name="Villager6" parent="." instance=ExtResource("3_uxaaf")]
+position = Vector2(1652, 682)
+
+[node name="Node2D" parent="." instance=ExtResource("4_0eokr")]
+position = Vector2(-415, 862)
+scale = Vector2(0.125048, 0.93824)
