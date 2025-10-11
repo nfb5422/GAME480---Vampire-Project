@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b387bp3t2uhg3"
-path="res://.godot/imported/redFlower2.png-51964c9f116fb2526738d4ff8e7fb895.ctex"
+uid="uid://116hp4tggd5q"
+path="res://.godot/imported/smallRock.png-06f8d79f412a6cd75bc033a538454b58.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Plants/Flowers/redFlower2.png"
-dest_files=["res://.godot/imported/redFlower2.png-51964c9f116fb2526738d4ff8e7fb895.ctex"]
+source_file="res://sprites/Plants/rocks/smallRock.png"
+dest_files=["res://.godot/imported/smallRock.png-06f8d79f412a6cd75bc033a538454b58.ctex"]
 
 [params]
 

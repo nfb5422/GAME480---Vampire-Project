@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqmgjusp7glkq"]
+
+[ext_resource type="Texture2D" uid="uid://cjgyg266rwx7e" path="res://sprites/buildingBlocks/brickWallPNGs/horWallLeft.png" id="1_24llc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8opdi"]
+size = Vector2(17.38, 6.19298)
+
+[node name="Node2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(10, 2)
+texture = ExtResource("1_24llc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(10, 5)
+scale = Vector2(0.125, 1.71)
+shape = SubResource("RectangleShape2D_8opdi")

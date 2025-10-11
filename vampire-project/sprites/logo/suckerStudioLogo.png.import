@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b387bp3t2uhg3"
-path="res://.godot/imported/redFlower2.png-51964c9f116fb2526738d4ff8e7fb895.ctex"
+uid="uid://c11d3ou77s5o3"
+path="res://.godot/imported/suckerStudioLogo.png-7fc089961af686b088d8417104f32fe1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Plants/Flowers/redFlower2.png"
-dest_files=["res://.godot/imported/redFlower2.png-51964c9f116fb2526738d4ff8e7fb895.ctex"]
+source_file="res://sprites/logo/suckerStudioLogo.png"
+dest_files=["res://.godot/imported/suckerStudioLogo.png-7fc089961af686b088d8417104f32fe1.ctex"]
 
 [params]
 
