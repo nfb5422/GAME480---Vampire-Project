@@ -7,6 +7,8 @@ class_name Villager
 @export var attack_damage: int = 10       # Damage to player
 @export var max_health: int = 100         # Enemy health
 
+const SOUL_SCENE = preload("res://soul_fragment.tscn")
+
 var roam_dir: Vector2 = Vector2.ZERO
 var player: Node = null
 var dead: bool = false
@@ -103,4 +105,11 @@ func take_damage(amount: int) -> void:
 func die() -> void:
 	dead = true
 	velocity = Vector2.ZERO
+	drop_soul()
 	queue_free()  # Immediately remove the enemy for now
+
+func drop_soul() -> void:
+	if SOUL_SCENE:
+		var soul = SOUL_SCENE.instantiate()
+		soul.global_position = global_position
+		get_parent().add_child(soul)

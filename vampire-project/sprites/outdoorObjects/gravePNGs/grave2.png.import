@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b387bp3t2uhg3"
-path="res://.godot/imported/redFlower2.png-51964c9f116fb2526738d4ff8e7fb895.ctex"
+uid="uid://e4urgbj36fwm"
+path="res://.godot/imported/grave2.png-5dbaaefc8cc4e214d8b58ec7e1c55646.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Plants/Flowers/redFlower2.png"
-dest_files=["res://.godot/imported/redFlower2.png-51964c9f116fb2526738d4ff8e7fb895.ctex"]
+source_file="res://sprites/outdoorObjects/gravePNGs/grave2.png"
+dest_files=["res://.godot/imported/grave2.png-5dbaaefc8cc4e214d8b58ec7e1c55646.ctex"]
 
 [params]
 

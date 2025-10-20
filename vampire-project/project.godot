@@ -14,6 +14,10 @@ config/name="Vampire Project"
 run/main_scene="uid://t6dlrmmf7le5"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
+[dotnet]
+
+project/assembly_name="Vampire Project"
+
 [input]
 
 Right={

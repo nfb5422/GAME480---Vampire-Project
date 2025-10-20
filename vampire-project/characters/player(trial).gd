@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var dash_speed = 5000
 @export var dash_duration := 0.2
 @export var dash_cooldown := 1.0
+
 # Sprites
 @onready var sprite_down = $SpriteDown
 @onready var sprite_up = $SpriteUp
@@ -17,6 +18,7 @@ var cooldown_timer := 0.0
 var is_dashing := false
 var dash_direction := Vector2.ZERO
 var dash_hit_enemies := []  # Track which enemies were hit this dash
+var soul_count: int = 0
 #blood meter
 @export var max_blood := 100
 var blood := max_blood
@@ -117,3 +119,20 @@ func _update_sprite_direction(input_direction: Vector2):
 func _on_bite_animation_finished():
 	bite_sprite.stop()
 	bite_sprite.visible = false
+
+func add_soul(amount: int = 1):	
+	soul_count += amount	
+	update_soul_ui()  # HUD güncelleme fonksiyonu
+
+var soul_label: Label = null  # HUD referansı cache'lenecek
+
+func _cache_hud():	
+	# HUD sahnesindeki SoulLabel'i bulur ve saklar		
+	soul_label = get_tree().get_root().find_child("SoulLabel", true, false)
+
+func update_soul_ui():
+	# Eğer SoulLabel daha bulunmadıysa, bir kere daha ara	
+		if soul_label == null:
+			_cache_hud()
+		if soul_label:
+			soul_label.text = "Soul: %d" % soul_count
