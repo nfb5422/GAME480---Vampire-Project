@@ -7,7 +7,7 @@ class_name Villager
 @export var attack_damage: int = 10       # Damage to player
 @export var max_health: int = 100         # Enemy health
 
-const SOUL_SCENE = preload("res://soul_fragment.tscn")
+const SOUL_SCENE = preload("res://Enemy fragments/soul_fragment.tscn")
 
 var roam_dir: Vector2 = Vector2.ZERO
 var player: Node = null

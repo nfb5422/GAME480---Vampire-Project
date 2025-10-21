@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://7plrfi08xwim"]
 
-[ext_resource type="Script" uid="uid://x3rntlsmsey3" path="res://enemy.gd" id="1_sbtgs"]
+[ext_resource type="Script" uid="uid://x3rntlsmsey3" path="res://characters/enemy.gd" id="1_sbtgs"]
 [ext_resource type="Texture2D" path="res://sprites/Plants/Flowers/purpleFlower1.png" id="2_kyemj"]
 [ext_resource type="Texture2D" uid="uid://grmqxp2fvcf0" path="res://sprites/Screenshot 2025-10-06 at 7.58.08 AM.png" id="3_awxhs"]
 

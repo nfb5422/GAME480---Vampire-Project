@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dkkpp5iymlhre" path="res://characters/player(trial).gd" id="1_mhsww"]
 [ext_resource type="Texture2D" uid="uid://bsblbm24ltjgu" path="res://sprites/FrontIdleCompExp.png.webp" id="2_0ayws"]
-[ext_resource type="Script" uid="uid://beythudxje5my" path="res://characters/bite_area.gd" id="3_vcn5m"]
+[ext_resource type="Script" uid="uid://beythudxje5my" path="res://Enemy fragments/bite_area.gd" id="3_vcn5m"]
 [ext_resource type="Texture2D" uid="uid://slehjc4hlap4" path="res://sprites/suckersBiteAnimation.png.webp" id="4_2ymvy"]
 [ext_resource type="Texture2D" uid="uid://bgk0ybdsfapku" path="res://sprites/BackStillTemp.png.webp" id="4_ts6gx"]
 [ext_resource type="Texture2D" uid="uid://1dio7epcipct" path="res://sprites/SideWalkTemp.png.webp" id="5_2ymvy"]

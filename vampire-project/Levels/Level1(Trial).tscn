@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://t05qgk0exvhk" path="res://Levels/test_floor.tscn" id="2_fmg63"]
 [ext_resource type="PackedScene" uid="uid://7plrfi08xwim" path="res://characters/villager.tscn" id="3_uxaaf"]
 [ext_resource type="PackedScene" uid="uid://bicucwfgys7kr" path="res://node_2d.tscn" id="4_0eokr"]
-[ext_resource type="PackedScene" uid="uid://dvyh6wgq4av7k" path="res://soul_fragment.tscn" id="5_io6nn"]
+[ext_resource type="PackedScene" uid="uid://dvyh6wgq4av7k" path="res://Enemy fragments/soul_fragment.tscn" id="5_io6nn"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(-118, -41)
@@ -21,7 +21,7 @@ position = Vector2(85, -13)
 zoom = Vector2(0.5, 0.5)
 
 [node name="TestFloor" parent="." instance=ExtResource("2_fmg63")]
-position = Vector2(200, 19)
+position = Vector2(57, 19)
 scale = Vector2(1, 23.6507)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -59,6 +59,7 @@ position = Vector2(-415, 862)
 scale = Vector2(0.125048, 0.93824)
 
 [node name="SoulFragment" parent="." instance=ExtResource("5_io6nn")]
+position = Vector2(-60, 69)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -66,9 +67,9 @@ scale = Vector2(0.125048, 0.93824)
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -1182.0
-offset_top = 20.0
-offset_right = -1142.0
-offset_bottom = 43.0
+offset_left = -1372.0
+offset_top = -3.0
+offset_right = -1332.0
+offset_bottom = 20.0
 grow_horizontal = 0
 scale = Vector2(2.16, 2.76)
