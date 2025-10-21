@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b387bp3t2uhg3"
-path="res://.godot/imported/redFlower2.png-51964c9f116fb2526738d4ff8e7fb895.ctex"
+uid="uid://cdxl6kmv1cb7w"
+path="res://.godot/imported/lamp.png-8055b963ab1e3b4772274b63ed327a6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Plants/Flowers/redFlower2.png"
-dest_files=["res://.godot/imported/redFlower2.png-51964c9f116fb2526738d4ff8e7fb895.ctex"]
+source_file="res://sprites/outdoorObjects/lamp.png"
+dest_files=["res://.godot/imported/lamp.png-8055b963ab1e3b4772274b63ed327a6b.ctex"]
 
 [params]
 

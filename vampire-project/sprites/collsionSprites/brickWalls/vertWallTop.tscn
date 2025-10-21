@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2jm7u454h4k8"]
+
+[ext_resource type="Texture2D" uid="uid://odcerxgh050g" path="res://sprites/buildingBlocks/brickWallPNGs/vertWallTop.png" id="1_s1jk1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8opdi"]
+size = Vector2(17.38, 6.19298)
+
+[node name="Node2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(10, 2)
+texture = ExtResource("1_s1jk1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(10, 2.01)
+scale = Vector2(0.59, 0.645)
+shape = SubResource("RectangleShape2D_8opdi")

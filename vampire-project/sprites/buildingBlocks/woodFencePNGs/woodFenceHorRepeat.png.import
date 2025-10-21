@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b387bp3t2uhg3"
-path="res://.godot/imported/redFlower2.png-51964c9f116fb2526738d4ff8e7fb895.ctex"
+uid="uid://cvnr2voy05svd"
+path="res://.godot/imported/woodFenceHorRepeat.png-6d2af2fba470a05db367f959083f0f03.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Plants/Flowers/redFlower2.png"
-dest_files=["res://.godot/imported/redFlower2.png-51964c9f116fb2526738d4ff8e7fb895.ctex"]
+source_file="res://sprites/buildingBlocks/woodFencePNGs/woodFenceHorRepeat.png"
+dest_files=["res://.godot/imported/woodFenceHorRepeat.png-6d2af2fba470a05db367f959083f0f03.ctex"]
 
 [params]
 

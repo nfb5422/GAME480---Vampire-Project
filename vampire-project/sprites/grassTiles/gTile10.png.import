@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b387bp3t2uhg3"
-path="res://.godot/imported/redFlower2.png-51964c9f116fb2526738d4ff8e7fb895.ctex"
+uid="uid://cbq7wtcb2cv20"
+path="res://.godot/imported/gTile10.png-20e4d5698d52a5ab78c252d10ee6d21d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Plants/Flowers/redFlower2.png"
-dest_files=["res://.godot/imported/redFlower2.png-51964c9f116fb2526738d4ff8e7fb895.ctex"]
+source_file="res://sprites/grassTiles/gTile10.png"
+dest_files=["res://.godot/imported/gTile10.png-20e4d5698d52a5ab78c252d10ee6d21d.ctex"]
 
 [params]
 

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://jogpv62lxeg"]
+
+[ext_resource type="Texture2D" uid="uid://ce7s3avv4e4wn" path="res://sprites/outdoorObjects/gravePNGs/grave5.png" id="1_hrnwm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8opdi"]
+size = Vector2(28, 40)
+
+[node name="Node2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(13.615, 16)
+texture = ExtResource("1_hrnwm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(14.125, 20)
+scale = Vector2(0.965, 1.01)
+shape = SubResource("RectangleShape2D_8opdi")

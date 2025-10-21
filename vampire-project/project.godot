@@ -14,6 +14,13 @@ config/name="Vampire Project"
 run/main_scene="uid://t6dlrmmf7le5"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
+[file_customization]
+
+folder_colors={
+"res://sprites/": "pink",
+"res://sprites/collsionSprites/": "orange"
+}
+
 [input]
 
 Right={
