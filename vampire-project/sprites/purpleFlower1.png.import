@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxiejvrsjpjjm"
-path="res://.godot/imported/purpleFlower1.png-0889a34a90cace44a1c44ea7c3d3741b.ctex"
+path="res://.godot/imported/purpleFlower1.png-a857adc1e2391362792de8bdc897f99c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Plants/Flowers/purpleFlower1.png"
-dest_files=["res://.godot/imported/purpleFlower1.png-0889a34a90cace44a1c44ea7c3d3741b.ctex"]
+source_file="res://sprites/purpleFlower1.png"
+dest_files=["res://.godot/imported/purpleFlower1.png-a857adc1e2391362792de8bdc897f99c.ctex"]
 
 [params]
 

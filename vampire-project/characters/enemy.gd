@@ -1,18 +1,20 @@
 extends CharacterBody2D
 class_name Villager
 
-@export var speed: float = 120.0        # Roaming speed
-@export var chase_speed: float = 240.0  # Chasing speed
-@export var attack_interval: float = 1.0  # Time between attacks
-@export var attack_damage: int = 10       # Damage to player
-@export var max_health: int = 100         # Enemy health
+@export var speed: float = 120.0
+@export var chase_speed: float = 240.0
+@export var attack_interval: float = 1.0
+@export var attack_damage: int = 10
+@export var max_health: int = 100
 
 const SOUL_SCENE = preload("res://Enemy fragments/soul_fragment.tscn")
+const BLOOD_SCENE = preload("res://Enemy fragments/blood_packages.tscn")
 
 var roam_dir: Vector2 = Vector2.ZERO
 var player: Node = null
 var dead: bool = false
 var health: int = max_health
+var last_hit_type: String = ""   # last attcak version
 
 # Timers
 var directionTimer: Timer
@@ -48,11 +50,9 @@ func _physics_process(delta: float) -> void:
 	if dead:
 		velocity = Vector2.ZERO
 	elif player:
-		# Always chase the player if detected
 		var dir = (player.global_position - global_position).normalized()
 		velocity = dir * chase_speed
 	else:
-		# Roam randomly
 		velocity = roam_dir * speed
 
 	move_and_collide(velocity * delta)
@@ -60,7 +60,7 @@ func _physics_process(delta: float) -> void:
 
 # --- Roaming ---
 func _on_Timer_timeout() -> void:
-	if not player:  # Only roam if no player detected
+	if not player:
 		var dirs = [Vector2.LEFT, Vector2.RIGHT, Vector2.ZERO]
 		roam_dir = dirs[randi() % dirs.size()]
 
@@ -68,21 +68,21 @@ func _on_Timer_timeout() -> void:
 # --- Chase Area ---
 func _on_chase_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		player = body  # Start chasing
+		player = body
 
 func _on_chase_area_body_exited(body: Node2D) -> void:
 	if body == player:
-		player = null  # Stop chasing if player leaves
+		player = null
 
 
 # --- Attack Area ---
 func _on_attack_area_body_entered(body: Node2D) -> void:
 	if body == player:
-		attackTimer.start()  # Start attacking
+		attackTimer.start()
 
 func _on_attack_area_body_exited(body: Node2D) -> void:
 	if body == player:
-		attackTimer.stop()   # Stop attacking
+		attackTimer.stop()
 
 
 # --- Attack ---
@@ -95,9 +95,10 @@ func _on_attack_timer_timeout() -> void:
 
 
 # --- Damage & Death Handling ---
-func take_damage(amount: int) -> void:
+func take_damage(amount: int, attack_type := "bite") -> void:   
 	if dead:
 		return
+	last_hit_type = attack_type
 	health -= amount
 	if health <= 0:
 		die()
@@ -105,11 +106,25 @@ func take_damage(amount: int) -> void:
 func die() -> void:
 	dead = true
 	velocity = Vector2.ZERO
-	drop_soul()
-	queue_free()  # Immediately remove the enemy for now
+	_drop_loot()   
+	queue_free()
 
-func drop_soul() -> void:
-	if SOUL_SCENE:
-		var soul = SOUL_SCENE.instantiate()
-		soul.global_position = global_position
-		get_parent().add_child(soul)
+# --- Drop logic ---
+func _drop_loot() -> void:
+	if last_hit_type == "bite":
+		if SOUL_SCENE:
+			var soul = SOUL_SCENE.instantiate()
+			soul.global_position = global_position
+			get_parent().add_child(soul)
+	elif last_hit_type == "claw":
+		
+		if BLOOD_SCENE:
+			var offsets = [
+				Vector2(-24, -16),  
+				Vector2(24, -8),    
+				Vector2(0, 24)      
+			]
+			for offset in offsets:
+				var blood = BLOOD_SCENE.instantiate()
+				blood.global_position = global_position + offset + Vector2(randf_range(-4, 4), randf_range(-4, 4))
+				get_parent().add_child(blood)

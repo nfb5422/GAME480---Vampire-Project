@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://c2sya6m7v0ta4"]
+[gd_scene load_steps=24 format=3 uid="uid://c2sya6m7v0ta4"]
 
 [ext_resource type="Script" uid="uid://dkkpp5iymlhre" path="res://characters/player(trial).gd" id="1_mhsww"]
 [ext_resource type="Texture2D" uid="uid://bsblbm24ltjgu" path="res://sprites/FrontIdleCompExp.png.webp" id="2_0ayws"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://slehjc4hlap4" path="res://sprites/suckersBiteAnimation.png.webp" id="4_2ymvy"]
 [ext_resource type="Texture2D" uid="uid://bgk0ybdsfapku" path="res://sprites/BackStillTemp.png.webp" id="4_ts6gx"]
 [ext_resource type="Texture2D" uid="uid://1dio7epcipct" path="res://sprites/SideWalkTemp.png.webp" id="5_2ymvy"]
+[ext_resource type="Script" uid="uid://bpyytqq0repy0" path="res://Enemy fragments/claw_area.gd" id="7_ok1p3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jisgs"]
 size = Vector2(35.4955, 26.1307)
@@ -110,6 +111,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_wjv4q"]
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_mhsww")
 
@@ -147,3 +150,15 @@ texture = ExtResource("4_ts6gx")
 
 [node name="SpriteSide" type="Sprite2D" parent="."]
 texture = ExtResource("5_2ymvy")
+
+[node name="ClawArea" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 4
+script = ExtResource("7_ok1p3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClawArea"]
+shape = SubResource("CircleShape2D_wjv4q")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ClawArea"]
+position = Vector2(83, -34)
+scale = Vector2(4.81726, 3.87768)
