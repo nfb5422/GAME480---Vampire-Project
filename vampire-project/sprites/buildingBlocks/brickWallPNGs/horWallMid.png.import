@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b387bp3t2uhg3"
-path="res://.godot/imported/redFlower2.png-51964c9f116fb2526738d4ff8e7fb895.ctex"
+uid="uid://3cglj0htt485"
+path="res://.godot/imported/horWallMid.png-b84184c24802055c05e8ee9b7606b003.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Plants/Flowers/redFlower2.png"
-dest_files=["res://.godot/imported/redFlower2.png-51964c9f116fb2526738d4ff8e7fb895.ctex"]
+source_file="res://sprites/buildingBlocks/brickWallPNGs/horWallMid.png"
+dest_files=["res://.godot/imported/horWallMid.png-b84184c24802055c05e8ee9b7606b003.ctex"]
 
 [params]
 

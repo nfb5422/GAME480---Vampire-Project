@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b387bp3t2uhg3"
-path="res://.godot/imported/redFlower2.png-51964c9f116fb2526738d4ff8e7fb895.ctex"
+uid="uid://dkovnkb7fwimr"
+path="res://.godot/imported/redMushrooms.png-304c1d8bd113b40e9465c3b83099f865.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Plants/Flowers/redFlower2.png"
-dest_files=["res://.godot/imported/redFlower2.png-51964c9f116fb2526738d4ff8e7fb895.ctex"]
+source_file="res://sprites/Plants/variousPlants/redMushrooms.png"
+dest_files=["res://.godot/imported/redMushrooms.png-304c1d8bd113b40e9465c3b83099f865.ctex"]
 
 [params]
 
